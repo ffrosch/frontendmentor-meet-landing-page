@@ -1,23 +1,86 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-default: "Red Hat Display", sans-serif;
-  --font-weight-regular: 400;
-  --font-weight-semibold: 500;
+  --*: initial; /* No default utility classes */
+
+  --font-sans: "Red Hat Display", sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-black: 900;
+
+  --color-primary: #4d96a9;
+  --color-primary-light: #8fe3f9;
+  --color-secondary: #855fb1;
+  --color-secondary-light: #d9b8ff;
+  --color-slate-300: #d1d1df;
+  --color-slate-600: #87879d;
+  --color-slate-900: #28283d;
+  --color-white: #fafafa;
+
+  --rounded-xs: 0.5rem;
+  --rounded-full: 50%;
+
+  /* Spacing */
+  /* @link https://utopia.fyi/spacing/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.5|0.25,1.5|2|2.5|3.5|4|4.5|5|7,s-l&g=s,l,xl,12 */
+  /* spacing 2xs: 4px → 5px */
+  --spacing-2xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
+  /* spacing xs: 8px → 10px */
+  --spacing-xs: clamp(0.5rem, 0.4565rem + 0.2174vw, 0.625rem);
+  /* spacing s: 16px → 20px */
+  --spacing-s: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  /* spacing m: 24px → 30px */
+  --spacing-m: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem);
+  /* spacing l: 32px → 40px */
+  --spacing-l: clamp(2rem, 1.8261rem + 0.8696vw, 2.5rem);
+  /* spacing xl: 40px → 50px */
+  --spacing-xl: clamp(2.5rem, 2.2826rem + 1.087vw, 3.125rem);
+  /* spacing 2xl: 56px → 70px */
+  --spacing-2xl: clamp(3.5rem, 3.1957rem + 1.5217vw, 4.375rem);
+  /* spacing 3xl: 64px → 80px */
+  --spacing-3xl: clamp(4rem, 3.6522rem + 1.7391vw, 5rem);
+  /* spacing 4xl: 72px → 90px */
+  --spacing-4xl: clamp(4.5rem, 4.1087rem + 1.9565vw, 5.625rem);
+  /* spacing 5xl: 80px → 100px */
+  --spacing-5xl: clamp(5rem, 4.5652rem + 2.1739vw, 6.25rem);
+  /* spacing 6xl: 112px → 140px */
+  --spacing-6xl: clamp(7rem, 6.3913rem + 3.0435vw, 8.75rem);
+
+  --text-s: var(--spacing-s);
+  --text-xl: var(--spacing-xl);
+  --text-3xl:  var(--spacing-3xl);
+  --text-4xl: var(--spacing-4xl);
 }
 
-body {
-  font-family: var(--font-default);
-  font-weight: var(--font-weight-regular);
+@layer base {
+  body {
+    font-size: clamp(1.125rem, 0.93rem + 0.45vw, 1.35rem); /* 18px */
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.1;
+    letter-spacing: 0rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: var(--font-weight-black);
+  }
+
+  h1 {
+    font-size: var(--text-4xl)
+  }
+
+  h2 {
+    color: var(--color-primary);
+    font-size: var(--text-s);
+    letter-spacing: var(--spacing-2xs);
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: var(--spacing-xl)
+  }
 }
 
-a {
-  color: var(--color-blue-400);
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--color-blue-500);
-  font-weight: var(--font-weight-semibold);
+@layer components {
 }
