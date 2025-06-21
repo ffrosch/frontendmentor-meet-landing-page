@@ -30,6 +30,7 @@ Users should be able to:
 
 ![Screenshot of the four card feature section on Desktop](./screenshot_desktop.png)
 
+![Screenshot of the four card feature section on Tablet](./screenshot_tablet.png)
 ![Screenshot of the four card feature section on Mobile](./screenshot_mobile.png)
 
 ### Links
@@ -208,6 +209,7 @@ Tech Stack: Bun, Vite, Vue, Typescript, Tailwind
 - Tailwind custom theme
 - CSS Grid
 - extended use of CSS custom properties
+- fluid sizes
 - [Vue](https://vuejs.org/) - JS library
 - [Vite](https://vite.dev/) - Build tool
 - [Typescript](https://www.typescriptlang.org/) - Type Safety
@@ -215,7 +217,12 @@ Tech Stack: Bun, Vite, Vue, Typescript, Tailwind
 
 ### What I learned
 
+First time I used fluid spacing and I am instantly convinced of its potential.
+It's such a breeze to make the page responsive and properly sized/spaced on every viewport size.
+Love it!
 
+The other nice thing I discovered was using a [grid to overlay a picture](https://css-tricks.com/using-performant-next-gen-images-in-css-with-image-set/) with multiple sources with Text and even background-color.
+This way the browser handles the right image choice really nicely without requiring additional logic.
 
 ## Author
 
@@ -223,3 +230,6 @@ Tech Stack: Bun, Vite, Vue, Typescript, Tailwind
 - Frontend Mentor - [@ffrosch](https://www.frontendmentor.io/profile/ffrosch)
 
 ## Acknowledgments
+
+Shout out to [Utopia](https://utopia.fyi/) for it's awesome fluid space generator.
+It's super nice to see how those custom properties come together and make the page nice to view on every viewport.
