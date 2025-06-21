@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --*: initial; /* No default utility classes */
+  /* --*: initial; /* No default utility classes */
 
   --font-sans: "Red Hat Display", sans-serif;
   --font-weight-medium: 500;
@@ -17,8 +17,7 @@
   --color-slate-900: #28283d;
   --color-white: #fafafa;
 
-  --rounded-xs: 0.5rem;
-  --rounded-full: 50%;
+  --radius-xs: 0.5rem;
 
   /* Spacing */
   /* @link https://utopia.fyi/spacing/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.5|0.25,1.5|2|2.5|3.5|4|4.5|5|7,s-l&g=s,l,xl,12 */
@@ -44,11 +43,15 @@
   --spacing-5xl: clamp(5rem, 4.5652rem + 2.1739vw, 6.25rem);
   /* spacing 6xl: 112px → 140px */
   --spacing-6xl: clamp(7rem, 6.3913rem + 3.0435vw, 8.75rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1240,144—256 */
+  --spacing-fluid-144-256: clamp(9rem, 6.5652rem + 12.1739vw, 16rem);
 
   --text-s: var(--spacing-s);
   --text-xl: var(--spacing-xl);
   --text-3xl:  var(--spacing-3xl);
   --text-4xl: var(--spacing-4xl);
+
+  --tracking-xs: var(--spacing-2xs);
 }
 
 @layer base {
@@ -66,21 +69,7 @@
     font-weight: var(--font-weight-black);
   }
 
-  h1 {
-    font-size: var(--text-4xl)
+  p {
+    color: var(--color-slate-600);
   }
-
-  h2 {
-    color: var(--color-primary);
-    font-size: var(--text-s);
-    letter-spacing: var(--spacing-2xs);
-    text-transform: uppercase;
-  }
-
-  h3 {
-    font-size: var(--spacing-xl)
-  }
-}
-
-@layer components {
 }
