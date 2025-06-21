@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-default: "Red Hat Display", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 500;
+}
+
+body {
+  font-family: var(--font-default);
+  font-weight: var(--font-weight-regular);
+}
+
+a {
+  color: var(--color-blue-400);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-blue-500);
+  font-weight: var(--font-weight-semibold);
+}
