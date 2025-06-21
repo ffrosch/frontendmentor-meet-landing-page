@@ -79,7 +79,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
     </article>
 
-    <Number :value="2" />
+    <Number :value="2" class="translate-y-m"/>
 
     <div class="overlay-grid">
       <picture>
