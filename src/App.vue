@@ -37,7 +37,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
 
     <Number :value="1" />
 
-    <article class="flex flex-col justify-center items-center">
+    <article class="flex flex-col justify-center items-center text-center">
       <div class="flex flex-wrap gap-l justify-center items-center">
         <div class="flex gap-l justify-center items-center">
           <img
@@ -79,7 +79,10 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
     </article>
 
-    <Number :value="2" class="translate-y-m"/>
+    <Number
+      :value="2"
+      class="translate-y-m"
+    />
 
     <div class="overlay-grid">
       <picture>
@@ -98,7 +101,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         />
       </picture>
 
-      <article class="flex justify-center items-center bg-primary/90 [&_*]:text-white">
+      <article class="flow-grid place-items-center place-content-center text-center bg-primary/90 [&_*]:text-white">
         <h2 class="text-xl font-black">Experience more together</h2>
         <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
         <CButton variant="secondary">Download <span class="text-secondary-light">v1.3</span></CButton>
@@ -110,11 +113,23 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
 </template>
 
 <style scoped>
+.flow-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .flow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .overlay-grid {
   display: grid;
 }
 
-.overlay-grid > * {
+.overlay-grid>* {
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 }
