@@ -43,15 +43,21 @@
   --spacing-5xl: clamp(5rem, 4.5652rem + 2.1739vw, 6.25rem);
   /* spacing 6xl: 112px → 140px */
   --spacing-6xl: clamp(7rem, 6.3913rem + 3.0435vw, 8.75rem);
+
+  /* Custom pairs */
+  --spacing-xs-l: clamp(0.5rem, -0.1957rem + 3.4783vw, 2.5rem);
+  --spacing-l-4xl: clamp(2rem, 0.7391rem + 6.3043vw, 5.625rem);
   /* @link https://utopia.fyi/clamp/calculator?a=320,1240,144—256 */
   --spacing-fluid-144-256: clamp(9rem, 6.5652rem + 12.1739vw, 16rem);
-
+  
   --text-s: var(--spacing-s);
   --text-xl: var(--spacing-xl);
-  --text-3xl:  var(--spacing-3xl);
-  --text-4xl: var(--spacing-4xl);
+  --text-3xl: var(--spacing-3xl);
+  --text-4xl: var(--spacing-l-4xl);
 
   --tracking-xs: var(--spacing-2xs);
+
+  --breakpoint-xl: 90rem;
 }
 
 @layer base {
@@ -59,7 +65,7 @@
     font-size: clamp(1.125rem, 0.93rem + 0.45vw, 1.35rem); /* 18px */
     font-family: var(--font-sans);
     font-weight: var(--font-weight-medium);
-    line-height: 1.1;
+    line-height: 1.4;
     letter-spacing: 0rem;
     background-color: var(--color-white);
   }
@@ -72,5 +78,19 @@
 
   p {
     color: var(--color-slate-600);
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .flow {
+    --flow-space: 1em;
+  }
+
+  .flow > * + * {
+    margin-top: var(--flow-space);
   }
 }

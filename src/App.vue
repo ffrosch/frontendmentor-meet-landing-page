@@ -8,17 +8,26 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
 </script>
 
 <template>
-  <main>
-    <Logo class="mx-auto" />
-    <div class="flex justify-between items-center">
+  <main class="flow">
+    <Logo class="mx-auto mt-l-4xl" />
+    <div class="flex flex-col xl:flex-row gap-4xl justify-center items-center mt-l-4xl">
       <img
         src="@/assets/desktop/image-hero-left.png"
         alt="Six small profile pictures of people"
         width="394"
         height="303"
+        class="hidden xl:block"
       >
 
-      <section class="flex flex-col items-center text-center max-w-[40ch]">
+      <img
+        src="@/assets/tablet/image-hero.png"
+        alt="Six small profile pictures of people"
+        width="820"
+        height="303"
+        class="xl:hidden"
+      >
+
+      <section class="flow flex flex-col items-center text-center max-w-[40ch]">
         <h1 class="text-4xl">Group Chat for Everyone</h1>
         <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
         <div class="flex flex-wrap gap-s justify-center">
@@ -32,14 +41,18 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         alt="Six small profile pictures of people"
         width="394"
         height="303"
+        class="hidden xl:block"
       >
     </div>
 
-    <Number :value="1" />
+    <Number
+      :value="1"
+      class="mt-4xl lg:mt-6xl"
+    />
 
     <article class="flex flex-col justify-center items-center text-center">
-      <div class="flex flex-wrap gap-l justify-center items-center">
-        <div class="flex gap-l justify-center items-center">
+      <div class="flex flex-wrap gap-s lg:gap-xs-l justify-center items-center">
+        <div class="flex gap-s lg:gap-xs-l justify-center items-center">
           <img
             class="rounded-xs w-fluid-144-256"
             src="@/assets/desktop/image-woman-in-videocall.jpg"
@@ -55,7 +68,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
             height="484"
           >
         </div>
-        <div class="flex gap-l justify-center items-center">
+        <div class="flex gap-s lg:gap-xs-l justify-center items-center">
           <img
             class="rounded-xs w-fluid-144-256"
             src="@/assets/desktop/image-men-in-meeting.jpg"
@@ -73,15 +86,17 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         </div>
       </div>
 
-      <h2 class="text-primary text-s tracking-xs uppercase">Built for modern use</h2>
-      <h3 class="text-xl">Smarter meetings, all in one place</h3>
-      <p>Send messages, share files, show your screen, and record your meetings — all in one
-        workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      <div class="flow mt-xl max-w-[45ch]">
+        <h2 class="text-primary text-s tracking-xs uppercase">Built for modern use</h2>
+        <h3 class="mt-s text-xl leading-xl">Smarter meetings, all in one place</h3>
+        <p>Send messages, share files, show your screen, and record your meetings — all in one
+          workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      </div>
     </article>
 
     <Number
       :value="2"
-      class="translate-y-m"
+      class="translate-y-xl"
     />
 
     <div class="overlay-grid">
@@ -91,7 +106,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
           :srcset="FooterMobile"
         />
         <source
-          media="(max-width: 1023px)"
+          media="(max-width: 1440px)"
           :srcset="FooterTablet"
         />
         <img
@@ -100,9 +115,9 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
           class="w-full max-h-[375px] object-cover object-top"
         />
       </picture>
-
-      <article class="flow-grid place-items-center place-content-center text-center bg-primary/90 [&_*]:text-white">
-        <h2 class="text-xl font-black">Experience more together</h2>
+      <div class="bg-primary/90"></div>
+      <article class="flow-grid place-items-center place-content-center mx-auto text-center lg:text-left [&_*]:text-white px-m md:px-6xl">
+        <h2 class="text-xl leading-xl font-black">Experience more together</h2>
         <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
         <CButton variant="secondary">Download <span class="text-secondary-light">v1.3</span></CButton>
       </article>
@@ -119,9 +134,9 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .flow-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 2fr 1fr;
   }
 }
 
