@@ -116,9 +116,9 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         />
       </picture>
       <div class="bg-primary/90"></div>
-      <article class="flow-grid place-items-center place-content-center mx-auto text-center lg:text-left [&_*]:text-white px-m md:px-6xl">
-        <h2 class="text-xl leading-xl font-black">Experience more together</h2>
-        <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+      <article class="flow-grid place-items-center place-content-center mx-auto text-center lg:text-left px-m md:px-6xl">
+        <h2 class="text-white text-xl leading-xl font-black">Experience more together</h2>
+        <p class="text-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
         <CButton variant="secondary">Download <span class="text-secondary-light">v1.3</span></CButton>
       </article>
     </div>
