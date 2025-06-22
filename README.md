@@ -50,11 +50,11 @@ bun create vite . --template vue-ts
 # import and usage of types in Vue defineProps function
 bun remove typescript && bun add --peer typescript
 bun add tailwindcss
-bun add -d @tailwindcss/vite @vue/tsconfig
+bun add -d @tailwindcss/vite @vue/tsconfig prettier prettier-plugin-tailwindcss
 bun install
 ```
 
-Modify `"scripts"` in `package.json` to look like this
+Modify `"scripts"` in `package.json` and also add `"prettier"` configuration
 
 ```json
 {
@@ -62,6 +62,11 @@ Modify `"scripts"` in `package.json` to look like this
     "dev": "bunx --bun vite",
     "build": "vue-tsc -b && bunx --bun vite build",
     "preview": "bunx --bun vite preview"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   }
 }
 ```
@@ -106,37 +111,25 @@ Add fonts and tailwind as well as your basic theme to `src/style.css`
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 @import "tailwindcss";
 
+/* custom properties */
 @theme {
-  --color-primary--50: hsl(260, 100%, 95%);
-  --color-primary--300: hsl(264, 82%, 80%);
-  --color-primary--500: hsl(263, 55%, 52%);
-
-  --color-neutral-white: hsl(0, 0%, 100%);
-  --color-neutral-grey-100: hsl(214, 17%, 92%);
-  --color-neutral-grey-200: hsl(0, 0%, 81%);
-  --color-neutral-grey-400: hsl(224, 10%, 45%);
-  --color-neutral-grey-500: hsl(217, 19%, 35%);
-  --color-neutral-darkblue: hsl(219, 29%, 14%);
-  --color-neutral-black: hsl(0, 0%, 7%);
-
-  --text-xs: 0.8125rem;
-  --font-barlow: "Barlow Semi Condensed", sans-serif;
+  
 }
 
-body {
-  font-size: var(--text-xs);
-  font-family: var(--font-barlow);
+/* basic rules for body, h, etc... */
+@layer base {
+
 }
 
-a {
-  color: var(--color-blue-400);
-  text-decoration: underline;
+/* create classes with @utility */
+@utility flow {
+  --flow-space: 1em;
+
+  & > * + * {
+    margin-top: var(--flow-space);
+  }
 }
 
-a:hover {
-  color: var(--color-blue-500);
-  font-weight: var(--font-weight-semibold);
-}
 ```
 
 Create the Github Workflow
