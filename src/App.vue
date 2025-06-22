@@ -27,14 +27,14 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         class="xl:hidden w-[calc(100%+4rem)] max-w-[850px]"
       >
 
-      <section class="flow flex flex-col items-center text-center max-w-[40ch]">
+      <article class="flow flex flex-col items-center text-center max-w-[40ch]">
         <h1 class="text-4xl">Group Chat for Everyone</h1>
         <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
         <div class="flex flex-wrap gap-s justify-center">
           <CButton variant="primary">Download <span class="text-primary-accent">v1.3</span></CButton>
           <CButton variant="secondary">What is it?</CButton>
         </div>
-      </section>
+      </article>
 
       <img
         src="@/assets/desktop/image-hero-right.png"
@@ -47,10 +47,13 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
 
     <Number
       :value="1"
-      class="mt-4xl lg:mt-6xl"
+      style="--flow-space: var(--spacing-4xl-6xl);"
     />
 
-    <article class="flex flex-col justify-center items-center text-center">
+    <article
+      class="flex flex-col justify-center items-center text-center"
+      style="--flow-space: var(--spacing-3xl);"
+    >
       <div class="flex flex-wrap gap-s lg:gap-xs-l justify-center items-center">
         <div class="flex gap-s lg:gap-xs-l justify-center items-center">
           <img
@@ -86,7 +89,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         </div>
       </div>
 
-      <div class="flow mt-xl max-w-[45ch]">
+      <div class="flow mt-2xl max-w-[45ch]">
         <h2 class="text-primary text-s tracking-xs uppercase">Built for modern use</h2>
         <h3 class="mt-s text-xl leading-xl">Smarter meetings, all in one place</h3>
         <p>Send messages, share files, show your screen, and record your meetings — all in one
@@ -116,9 +119,11 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         />
       </picture>
       <div class="bg-primary/90"></div>
-      <article class="flow-grid place-items-center place-content-center mx-auto text-center lg:text-left px-m md:px-6xl">
+      <article
+        class="flow-grid place-items-center place-content-center mx-auto text-center lg:text-left" style="--padding: var(--spacing-l-4xl)">
         <h2 class="text-white text-xl leading-xl font-black">Experience more together</h2>
-        <p class="text-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+        <p class="text-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video
+          sessions.</p>
         <CButton variant="secondary">Download <span class="text-secondary-accent">v1.3</span></CButton>
       </article>
     </div>
@@ -128,6 +133,11 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
 </template>
 
 <style scoped>
+article {
+  --padding: var(--spacing-l);
+  padding-inline: var(--padding);
+}
+
 .flow-grid {
   display: grid;
   grid-template-columns: 1fr;

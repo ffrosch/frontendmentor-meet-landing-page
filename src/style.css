@@ -10,9 +10,9 @@
 
   --color-primary: #4d96a9;
   --color-primary-accent: #8fe3f9;
-  --color-primary-light: #71C0D4;
+  --color-primary-light: #71c0d4;
   --color-secondary: #855fb1;
-  --color-secondary-light: #B18BDD;
+  --color-secondary-light: #b18bdd;
   --color-secondary-accent: #d9b8ff;
   --color-slate-300: #d1d1df;
   --color-slate-600: #87879d;
@@ -22,7 +22,7 @@
   --radius-xs: 0.5rem;
 
   /* Spacing */
-  /* @link https://utopia.fyi/spacing/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.5|0.25,1.5|2|2.5|3.5|4|4.5|5|7,s-l&g=s,l,xl,12 */
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.5|0.25,1.5|2|2.5|3.5|4|4.5|5|7,s-l|l-4xl|4xl-6xl&g=s,l,xl,12 */
   /* spacing 2xs: 4px → 5px */
   --spacing-2xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
   /* spacing xs: 8px → 10px */
@@ -49,9 +49,11 @@
   /* Custom pairs */
   --spacing-xs-l: clamp(0.5rem, -0.1957rem + 3.4783vw, 2.5rem);
   --spacing-l-4xl: clamp(2rem, 0.7391rem + 6.3043vw, 5.625rem);
+  --spacing-4xl-6xl: clamp(4.5rem, 3.0217rem + 7.3913vw, 8.75rem);
+
   /* @link https://utopia.fyi/clamp/calculator?a=320,1240,144—256 */
   --spacing-fluid-144-256: clamp(9rem, 6.5652rem + 12.1739vw, 16rem);
-  
+
   --text-s: var(--spacing-s);
   --text-xl: var(--spacing-xl);
   --text-3xl: var(--spacing-3xl);
