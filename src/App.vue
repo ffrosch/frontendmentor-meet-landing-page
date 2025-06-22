@@ -10,13 +10,13 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
 <template>
   <main class="flow">
     <Logo class="mx-auto mt-l-4xl" />
-    <div class="flex flex-col xl:flex-row gap-4xl justify-center items-center mt-l-4xl">
+    <div class="flex flex-col xl:flex-row gap-4xl justify-center items-center mt-l-4xl overflow-x-hidden">
       <img
         src="@/assets/desktop/image-hero-left.png"
         alt="Six small profile pictures of people"
         width="394"
         height="303"
-        class="hidden xl:block"
+        class="hidden xl:block -ml-8"
       >
 
       <img
@@ -24,7 +24,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         alt="Six small profile pictures of people"
         width="820"
         height="303"
-        class="xl:hidden"
+        class="xl:hidden w-[calc(100%+4rem)] max-w-[850px]"
       >
 
       <section class="flow flex flex-col items-center text-center max-w-[40ch]">
@@ -41,7 +41,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         alt="Six small profile pictures of people"
         width="394"
         height="303"
-        class="hidden xl:block"
+        class="hidden xl:block -mr-8"
       >
     </div>
 
