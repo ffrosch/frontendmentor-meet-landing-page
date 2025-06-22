@@ -31,7 +31,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
         <h1 class="text-4xl">Group Chat for Everyone</h1>
         <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
         <div class="flex flex-wrap gap-s justify-center">
-          <CButton variant="primary">Download <span class="text-primary-light">v1.3</span></CButton>
+          <CButton variant="primary">Download <span class="text-primary-accent">v1.3</span></CButton>
           <CButton variant="secondary">What is it?</CButton>
         </div>
       </section>
@@ -119,7 +119,7 @@ import FooterMobile from "@/assets/mobile/image-footer.jpg";
       <article class="flow-grid place-items-center place-content-center mx-auto text-center lg:text-left px-m md:px-6xl">
         <h2 class="text-white text-xl leading-xl font-black">Experience more together</h2>
         <p class="text-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-        <CButton variant="secondary">Download <span class="text-secondary-light">v1.3</span></CButton>
+        <CButton variant="secondary">Download <span class="text-secondary-accent">v1.3</span></CButton>
       </article>
     </div>
   </main>

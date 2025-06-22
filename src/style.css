@@ -9,9 +9,11 @@
   --font-weight-black: 900;
 
   --color-primary: #4d96a9;
-  --color-primary-light: #8fe3f9;
+  --color-primary-accent: #8fe3f9;
+  --color-primary-light: #71C0D4;
   --color-secondary: #855fb1;
-  --color-secondary-light: #d9b8ff;
+  --color-secondary-light: #B18BDD;
+  --color-secondary-accent: #d9b8ff;
   --color-slate-300: #d1d1df;
   --color-slate-600: #87879d;
   --color-slate-900: #28283d;
